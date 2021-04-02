@@ -5,14 +5,12 @@ URL = f"https://stackoverflow.com/jobs?q=python"
 
 # 1.page 2.request 3.job extract
 
-
 # def get_last_page(url):
 #     result = requests.get(url)
 #     soup = BeautifulSoup(result.text, "html.parser")
 #     pages = soup.find("div", {"class": "s-pagination"}).find_all("a")
 #     last_page = pages[-2].get_text(strip=True)
 #     return int(last_page)
-
 
 def extract_job(html):
     title = html.find("h2", {"class": "mb4"}).find("a")["title"]
@@ -31,7 +29,6 @@ def extract_job(html):
         "link": f"https://stackoverflow.com/jobs/{job_id}/"
     }
 
-
 def extract_jobs(last_page, url):
     jobs = []
     for page in range(last_page):
@@ -43,7 +40,6 @@ def extract_jobs(last_page, url):
             job = extract_job(res)
             jobs.append(job)
     return jobs
-
 
 def get_jobs(word):
   url = f"https://stackoverflow.com/jobs?q={word}"
