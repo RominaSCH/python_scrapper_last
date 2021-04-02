@@ -16,6 +16,14 @@
           padding: 0%;
           font-family: 'Ubuntu', sans-serif;
       }
+      @keyframes colorChange{
+        0%{color:var(--basic-color);}
+        20%{color:#390f63;}
+        40%{color:#6e0e6a;}
+        60%{color:#ba13b3;}
+        80%{color:#61209e;}
+        100%{color:var(--basic-color);}
+      }
       h1{
         font-size: 80px;
         color: var(--basic-color);
@@ -25,6 +33,7 @@
         background: var(--couple-color);
         height: 180px;
         text-shadow: 2px 2px 1px rgba(150, 150, 150, 1);
+        animation: colorChange 5s ease-in-out infinite;
       }
       body{
           background: var(--couple-color);

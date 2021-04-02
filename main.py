@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
-from scrapper import get_jobs
+from so import get_jobs as so_get_jobs
+from wwr import get_jobs as wwr_get_jobs
 from exporter import save_to_file
 
 app = Flask("SuperScrapper")
@@ -19,7 +20,7 @@ def report():
         if existing_jobs:
             jobs = existing_jobs
         else:
-            jobs = get_jobs(word)
+            jobs = wwr_get_jobs(word) +so_get_jobs(word)
             db[word] = jobs
     else:
         return redirect("/")  #입력없을시 못벗어남

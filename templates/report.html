@@ -70,7 +70,7 @@
       section{
         width:100%;
         display:grid;
-        grid-template-columns: 50% 20% 25% 5%;
+        grid-template-columns: 20% 50% 25% 5%;
         gap:10px;
       }
     </style>
@@ -86,8 +86,8 @@
       {% for job in jobs %}
       <div class="box">
         <section>
-          <span>{{job.title}}</span>
           <span>{{job.company}}</span>
+          <span>{{job.title}}</span>
           <span>{{job.location}}</span>
           <a href="{{job.link}}" target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
