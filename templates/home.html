@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job search</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Adamina&family=Bebas+Neue&family=Ubuntu:wght@300;400;500&display=swap');
+      :root{
+          --basic-color:#0A174E;
+          --couple-color:#F5D042;
+      }
+      *{
+          margin: 0;
+          padding: 0%;
+          font-family: 'Ubuntu', sans-serif;
+      }
+      h1{
+        font-size: 80px;
+        color: var(--basic-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--couple-color);
+        height: 180px;
+        text-shadow: 2px 2px 1px rgba(150, 150, 150, 1);
+      }
+      body{
+          background: var(--couple-color);
+      }
+      form{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+      }
+      input{
+          border: none;
+          width: 200px;
+          height: 35px;
+          text-align: center;
+          margin-bottom: 15px;
+          font-size: 20px;
+          font-weight: 300;
+          border-radius: 5px;
+          box-shadow:2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+      }
+      input:hover{
+          background: white;
+      }
+      button{
+          /* all: unset; */
+          border: none;
+          width: 90px;
+          height: 30px;
+          border-radius: 3px;
+          background: var(--basic-color);
+          color: white;
+          font-size: 19px;
+          font-weight: 300;
+          box-shadow:2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+          transition: background 0.3s ease-in-out:
+      }
+      button:active{
+          background: #000;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>Job Search</h1>
+    <form action="/report" method="get">
+      <input placeholder="Search for a job" required name="word" />
+      <button>Search</button>
+    </form>
+  </body>
+</html>
